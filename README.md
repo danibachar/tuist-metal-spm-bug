@@ -8,7 +8,7 @@ When using Tuist 4.78.1 with an external dependency containing Metal shader file
 
 ### Root Cause
 
-The bug was introduced in [PR #8207](https://github.com/tuist/tuist/pull/8207), specifically in this file change: [Sources/TuistGenerator/Generator/ProjectFileElements.swift](https://github.com/tuist/tuist/pull/8207/files#diff-2c4c30a25ed01e55d1e6dd5e07a16c1e02ec6c24a95e0ae9f8c33edb7a0d5e63).
+The bug was introduced in [PR #8207](https://github.com/tuist/tuist/pull/8207), specifically in this file change: [[Sources/TuistGenerator/Generator/ProjectFileElements.swift]([https://github.com/tuist/tuist/pull/8207/files#diff-2c4c30a25ed01e55d1e6dd5e07a16c1e02ec6c24a95e0ae9f8c33edb7a0d5e63](https://github.com/tuist/tuist/pull/8207/changes#diff-fd82aca7a4046536b40e4923717b57aa7d9b94763a1ec03805753747fdd6a38aR80))](https://github.com/tuist/tuist/pull/8207/changes#diff-fd82aca7a4046536b40e4923717b57aa7d9b94763a1ec03805753747fdd6a38aR80).
 
 This PR changed how Metal files are handled when generating the Xcode project, causing them to be added as compiled sources when they should only be included as resources (as defined in the SPM `Package.swift`).
 
@@ -120,5 +120,5 @@ When using pure SPM or Tuist 4.78.0, this is respected. In Tuist 4.78.1, the gen
 ## Related Links
 
 - **Bug-introducing PR:** [tuist/tuist#8207](https://github.com/tuist/tuist/pull/8207)
-- **Specific file change:** [ProjectFileElements.swift diff](https://github.com/tuist/tuist/pull/8207/files#diff-2c4c30a25ed01e55d1e6dd5e07a16c1e02ec6c24a95e0ae9f8c33edb7a0d5e63)
+- **Specific file change:** [[ProjectFileElements.swift diff](https://github.com/tuist/tuist/pull/8207/files#diff-2c4c30a25ed01e55d1e6dd5e07a16c1e02ec6c24a95e0ae9f8c33edb7a0d5e63)](https://github.com/tuist/tuist/pull/8207/changes#diff-fd82aca7a4046536b40e4923717b57aa7d9b94763a1ec03805753747fdd6a38aR80)
 
